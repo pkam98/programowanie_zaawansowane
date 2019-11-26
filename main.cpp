@@ -7,12 +7,13 @@ TString fun(const char* c){
 }
 
 int main() {
-    TString s1;
-    TString s2 ("inicjalizacja słowem");
-   TString s3 (s2);
+    //TString s1;
+    //TString s2 ("inicjalizacja słowem");
+   //TString s3 (s2);
     //s3=s2;
-    s3 = std::move(s1);
-   // TString s5 = fun("konstruktor przenoszący");
-    //TString s6 = s4;
+    //s3 = std::move(s1);
+    TString s4=("test");
+    TString s5 = fun("konstruktor przenoszący");
+    TString s6 = s4;
 }
 
