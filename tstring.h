@@ -12,9 +12,12 @@ class TString {
     TString (const TString& s);
     TString& operator=(const TString& s);
     TString( TString&& s);
-     
     TString& operator= (TString&& s);
-     
+
+    //Operatory na rzecz typu String
+    char& operator[](size_t n);
+    const char& operator[](size_t n) const;
+    //Destuktor
     ~TString();
     private:
     char* ptr = nullptr;
@@ -24,4 +27,4 @@ class TString {
 };
 
 #endif
-// g++ -std=c++14 pliki do kompilacji.cpp /*cppp -o nazwa_pliku_wyj -DDEBUG
+// g++ -std=c++14 pliki do kompilacji.cpp /*.cpp -o output_file -DDEBUG

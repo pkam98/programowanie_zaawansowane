@@ -7,7 +7,8 @@ TString fun(const char* c){
 }
 
 int main() {
-    //TString s1;
+    TString s1=("trololo");
+    cout<<s1[3]<<endl;
     //TString s2 ("inicjalizacja słowem");
    //TString s3 (s2);
     //s3=s2;
