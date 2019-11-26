@@ -32,7 +32,7 @@ TString::TString(const TString& s):ptr(nullptr),len(s.len){
     #endif
 }
 
-TString& TString::operator=(const TString& s){
+ TString& TString::operator=(const TString& s){
     if(this !=&s){
         delete [] ptr;
         ptr=nullptr;
@@ -46,6 +46,20 @@ TString& TString::operator=(const TString& s){
     }
     #ifdef DEBUG
     cout<< "TString copy operator= "<<len<<"-"<< (ptr ? ptr : "pusty")<<endl;
+    #endif
+    return *this;
+}
+
+TString& TString::operator=(TString&& s){
+    if(this!= &s ){
+        delete [] ptr;
+        len=s.len;
+        ptr=s.ptr;
+        s.len=0;
+        s.ptr=nullptr;
+    }
+    #ifdef DEBUG
+    cout<<" TString move operator= "<<len <<"-"<<(ptr ? ptr : "pusty")<<endl;
     #endif
     return *this;
 }

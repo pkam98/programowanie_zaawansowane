@@ -11,6 +11,8 @@ class TString {
     TString (const char* s=nullptr);
     TString (const TString& s);
     TString& operator=(const TString& s);
+    TString( TString&& s);
+    TString& operator= (TString&& s);
 
     ~TString();
     private:
@@ -21,3 +23,4 @@ class TString {
 };
 
 #endif
+// g++ -std=c++14 pliki do kompilacji.cpp /*cppp -o nazwa_pliku_wyj -DDEBUG
